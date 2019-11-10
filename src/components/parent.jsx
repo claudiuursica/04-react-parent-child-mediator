@@ -11,7 +11,7 @@ const Parent = props => {
   return (
     <div>
       <Child1 onHover={handleChild1Hover} onHoverOut={handleChild1HoverOut} />
-      <Child2 />
+      <Child2 onHover={handleChild2Hover} onHoverOut={handleChild2HoverOut} />
     </div>
   );
 };

@@ -2,3 +2,20 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+.parent {
+  background-color: darkgoldenrod;
+  display: flex;
+}
+
+.child1 {
+  width: 50px;
+  height: 20px;
+  background-color: red;
+}
+
+.child2 {
+  width: 50px;
+  height: 20px;
+  background-color: green;
+}
