@@ -1,7 +1,7 @@
-const Child1 = props => {
+const Child1 = ({ onHover, onHoverOut }) => {
   console.log("Child1", JSON.stringify(props));
   return (
-    <div>
+    <div onMouseOver={onHover} onMouseOut={onHoverOut}>
       <span>Child 1</span>
     </div>
   );
