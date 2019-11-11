@@ -18,7 +18,7 @@ const Child2 = ({ expanded = false, onChange }) => {
   };
 
   return (
-    <div className="child2">
+    <div className={isExpanded ? "child2 expanded" : "child2 collapsed"}>
       <span>Child 2</span>
       <button onClick={handleOnClick}>
         {isExpanded ? "Collapse" : "Expand"}

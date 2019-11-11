@@ -15,7 +15,14 @@
 }
 
 .child2 {
-  width: 150px;
   height: 50px;
   background-color: green;
+}
+
+.expanded {
+  width: 300px;
+}
+
+.collapsed {
+  width: 100px;
 }
