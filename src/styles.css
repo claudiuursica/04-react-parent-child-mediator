@@ -1,6 +1,5 @@
 .App {
   font-family: sans-serif;
-  text-align: center;
 }
 
 .parent {
@@ -14,8 +13,7 @@
   background-color: red;
 }
 
-.child2 {
-  height: 50px;
+.child0 {
   background-color: green;
 }
 

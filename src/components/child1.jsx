@@ -1,11 +1,12 @@
 import React from "react";
 import "../styles.css";
 
-const Child1 = ({ onHover, onHoverOut }) => {
-  console.log("Child1", JSON.stringify("props"));
+const Child1 = ({ isCollapseVisible, onCollapse }) => {
   return (
-    <div className="child1" onMouseOver={onHover} onMouseOut={onHoverOut}>
-      Child 1
+    <div className="child1">
+      {isCollapseVisible && (
+        <button onClick={onCollapse}>Collapse Fake Menu</button>
+      )}
     </div>
   );
 };

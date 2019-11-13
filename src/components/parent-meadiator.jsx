@@ -1,30 +1,28 @@
 import React, { useState } from "react";
+import Child0 from "./child0";
 import Child1 from "./child1";
-import Child2 from "./child2";
 
 const ParentMediator = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isChild0Expanded, setIsChild0Expanded] = useState(false);
 
-  console.log("ParentMediator");
-
-  const handleChild1Hover = () => {
-    console.log("Child1 Hover, affect child 2");
-    setIsExpanded(!isExpanded);
+  const handleChild1Collapse = () => {
+    setIsChild0Expanded(false);
   };
 
-  const handleChild1HoverOut = () => {
-    console.log("Child1 HoverOut, affect child 2 again");
-    setIsExpanded(!isExpanded);
-  };
-
-  const handleCHild2ExpandCollapse = isExpanded => {
-    setIsExpanded(isExpanded);
+  const handleChild0ExpandCollapse = isExpanded => {
+    setIsChild0Expanded(isExpanded);
   };
 
   return (
     <div className="parent">
-      <Child1 onHover={handleChild1Hover} onHoverOut={handleChild1HoverOut} />
-      <Child2 expanded={isExpanded} onChange={handleCHild2ExpandCollapse} />
+      <Child0
+        expanded={isChild0Expanded}
+        onChange={handleChild0ExpandCollapse}
+      />
+      <Child1
+        isCollapseVisible={isChild0Expanded}
+        onCollapse={handleChild1Collapse}
+      />
     </div>
   );
 };
